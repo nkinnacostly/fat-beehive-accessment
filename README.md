@@ -1,4 +1,4 @@
-# Demo - The Demo Shop
+# Fat-Beehive Front End Task
 
 A modern, responsive website built for charities with big ambitions. This project showcases affordable website solutions designed to help charities reach more supporters, tell their story effectively, and maximize donations.
 
