@@ -1,0 +1,21 @@
+// Main SCSS Entry Point
+// Import all SCSS modules in the correct order
+
+// Base styles (variables, mixins, reset)
+@use "base/variables" as *;
+
+// Component styles (buttons, cards, forms, etc.)
+@use "components/header";
+@use "components/hero";
+@use "components/carousel-banner";
+@use "components/process-timeline";
+@use "components/cta-section";
+@use "components/footer";
+@use "components/logo";
+
+// Main content styles
+.main {
+  min-height: calc(100vh - 80px); // Adjust based on header height
+  padding: $spacing-large 0;
+  margin-top: 0; // Remove any top margin since header is sticky
+}

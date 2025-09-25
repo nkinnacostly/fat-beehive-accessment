@@ -1,0 +1,19 @@
+{
+  "name": "fat-beehive-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "sass:watch": "sass project/assets/scss/main.scss project/assets/css/main.css --watch",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "express": "^5.1.0",
+    "twig": "^1.17.1"
+  }
+}

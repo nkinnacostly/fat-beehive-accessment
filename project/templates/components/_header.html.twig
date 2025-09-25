@@ -1,0 +1,34 @@
+{# Header Component
+   Reusable header component with logo, navigation, and contact button
+   Following semantic HTML5 and accessibility best practices #}
+<header class="header">
+  <div class="header__container">
+    {# Logo Section - Using reusable logo component #}
+    <div class="header__logo">
+      {% include 'components/_logo.html.twig' %}
+    </div>
+
+    {# Navigation Section #}
+    <nav class="header__nav" role="navigation" aria-label="Main navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#about" class="header__nav-link">About Us</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#services" class="header__nav-link">Our Services</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#projects" class="header__nav-link">Projects</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#team" class="header__nav-link">Our Team</a>
+        </li>
+      </ul>
+    </nav>
+
+    {# Contact Button Section #}
+    <div class="header__cta">
+      <a href="#contact" class="header__contact-btn">Contact Us</a>
+    </div>
+  </div>
+</header>

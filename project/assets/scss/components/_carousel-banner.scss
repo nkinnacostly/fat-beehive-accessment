@@ -1,0 +1,129 @@
+// Carousel Banner Styles
+// Following BEM methodology for maintainable and semantic CSS
+
+@use "../base/variables" as *;
+
+.carousel-banner {
+  background-color: $light-green;
+  height: 114px;
+  padding: $spacing-medium 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    animation: scroll-right-to-left 60s linear infinite;
+    width: max-content;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: $spacing-medium;
+    white-space: nowrap;
+  }
+
+  &__item {
+    font-family: $font-family-primary;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+
+    .asterisk-icon {
+      width: 20px;
+      height: 24px;
+    }
+  }
+}
+
+// Infinite scroll animation
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+// Pause animation on hover for better UX
+.carousel-banner:hover {
+  .carousel-banner__track {
+    animation-play-state: paused;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .carousel-banner {
+    &__item {
+      font-size: 0.9rem;
+    }
+
+    &__separator {
+      .asterisk-icon {
+        width: 20px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-banner {
+    padding: $spacing-small 0;
+
+    &__item {
+      font-size: 0.875rem;
+    }
+
+    &__separator {
+      .asterisk-icon {
+        width: 18px;
+        height: 22px;
+      }
+    }
+
+    &__content {
+      gap: $spacing-small;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-banner {
+    padding: $spacing-small 0;
+
+    &__item {
+      font-size: 0.75rem;
+      padding: $spacing-small $spacing-medium;
+    }
+
+    &__separator {
+      .asterisk-icon {
+        width: 16px;
+        height: 20px;
+      }
+    }
+
+    &__content {
+      gap: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use "sass:color";
+
+// Color Variables
+// Primary brand color used throughout the site
+$primary-color: #243342;
+$text-color: #616161;
+
+// Secondary colors based on the header design
+$light-green: #b2fba4; // Light green for logo circle and button text
+$dark-green: #2e7d32; // Dark green for logo icon
+$dark-gray: #424242; // Dark gray for main text and navigation
+$light-gray: #757575; // Light gray for tagline
+$white: #ffffff; // Background color
+$black: #000000; // Background color
+
+// Process timeline colors
+$process-bg: #fffcf0; // Light off-white background
+
+// Typography
+$font-family-primary: "Poppins", sans-serif;
+$font-size-large: 2rem; // For "Demo" title
+$font-size-medium: 1rem; // For navigation links
+$font-size-small: 0.875rem; // For tagline
+
+// Font Weights (Poppins specific)
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-small: 0.5rem;
+$spacing-medium: 0.8rem;
+$spacing-large: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 5rem;
+
+// Border radius
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+
+// Button Mixin
+@mixin button-base {
+  font-family: $font-family-primary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semibold;
+  padding: $spacing-medium $spacing-large;
+  border-radius: $border-radius-medium;
+  text-decoration: none;
+  display: inline-block;
+  transition: all $transition-fast;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $light-green;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $primary-color;
+  color: $light-green;
+
+  &:hover {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: $white;
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+    transform: translateY(-2px);
+  }
+}

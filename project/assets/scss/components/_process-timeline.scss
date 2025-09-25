@@ -1,0 +1,143 @@
+// Process Timeline Styles
+// Following BEM methodology for maintainable and semantic CSS
+
+@use "../base/variables" as *;
+
+.process-timeline {
+  background-color: $process-bg;
+  padding: $spacing-xl 0;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    padding: 0 $spacing-large;
+  }
+
+  &__subtitle {
+    font-family: $font-family-primary;
+    font-size: 1.125rem;
+    font-weight: $font-weight-semibold;
+    color: $text-color;
+    margin: 0 0 $spacing-small 0;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    color: $black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-small;
+
+    &-dot {
+      width: 12px;
+      height: 12px;
+      background-color: $light-green;
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .process-timeline {
+    &__container {
+      padding: 0 $spacing-large;
+    }
+
+    &__title {
+      font-size: 2.75rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .process-timeline {
+    padding: $spacing-large 0;
+
+    &__container {
+      padding: 0 $spacing-medium;
+    }
+
+    &__header {
+      padding: 0 $spacing-medium;
+      margin-bottom: $spacing-large;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    &__content {
+      padding: 0 $spacing-small;
+    }
+
+    &__image {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .process-timeline {
+    padding: $spacing-medium 0;
+
+    &__container {
+      padding: 0 $spacing-small;
+    }
+
+    &__header {
+      padding: 0 $spacing-small;
+      margin-bottom: $spacing-medium;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}

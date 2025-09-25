@@ -1,0 +1,79 @@
+{# Footer Component #}
+{# Multi-column layout with brand info, navigation, social links, and scroll-to-top button #}
+
+<footer class="footer">
+  <div class="footer__container">
+  <div class="footer__brand-contact">
+    <!-- Brand/Contact Information --> 
+    <div class="footer__brand">
+      <div class="footer__logo">
+        {% include 'components/_logo.html.twig' %}
+      </div>
+<div class="footer__contact_details">
+  
+      <div class="footer__contact">
+        <div class="footer__address">
+          <p>10a Lant Street,</p>
+          <p>London, SE1 1QR</p>
+        </div>
+        
+      </div>
+
+      <div class="footer__contact">
+        <div class="footer__contact-links">
+          <a href="tel:+44 (0)1234 988 788" class="footer__phone">+44 (0)1234 988 788</a>
+          <a href="mailto:info@demo.com.uk" class="footer__email">info@demo.com.uk</a>
+        </div>
+        
+      </div>
+</div>
+    </div>
+      
+  </div>
+
+  <div class="footer__navigation-social">
+  <div class="footer__navigation-social-container">
+    <!-- Navigation Links -->
+    <div class="footer__navigation">
+
+      <nav class="footer__nav">
+        <a href="#about" class="footer__nav-link">About Us</a>
+        <a href="#services" class="footer__nav-link">Our Services</a>
+        <a href="#case-studies" class="footer__nav-link">Case Studies</a>
+        <a href="#partners" class="footer__nav-link">Partners</a>
+      </nav>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer__social">
+
+      <nav class="footer__social-nav">
+        <a href="#" class="footer__social-link">Facebook</a>
+        <a href="#" class="footer__social-link">Twitter</a>
+        <a href="#" class="footer__social-link">Linkedin</a>
+        <a href="#" class="footer__social-link">Instagram</a>
+      </nav>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="footer__scroll-top">
+      <button class="footer__scroll-btn" aria-label="Scroll to top">
+        <svg width="35" height="25" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.4186 8.03564L17.4186 31.0373" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.0344 16.6614L18.0072 6.8825C17.9337 6.79313 17.8433 6.72155 17.7421 6.67253C17.6408 6.6235 17.5309 6.59814 17.4198 6.59814C17.3087 6.59814 17.1989 6.6235 17.0976 6.67253C16.9963 6.72155 16.9059 6.79313 16.8324 6.8825L8.80366 16.6614" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      </button>
+    </div>
+  </div>
+  <div>
+     <!-- Copyright --> 
+     <div class="footer__copyright">
+      <p>&copy; 2025 Demo. All rights reserved.</p>
+     </div>
+  </div>
+  </div>
+
+  </div>
+
+</footer>
