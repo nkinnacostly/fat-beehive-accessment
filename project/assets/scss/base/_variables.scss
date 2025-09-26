@@ -75,6 +75,15 @@ $transition-fast: 0.2s ease;
     transform: translateY(-2px);
   }
 }
+@mixin gradient-text(
+  $gradient: linear-gradient(225deg, #f76680 0%, #57007b 100%)
+) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 
 @mixin button-secondary {
   @include button-base;

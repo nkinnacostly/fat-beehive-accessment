@@ -608,10 +608,86 @@
   border-radius: 50%;
 }
 .process-timeline__content {
-  width: 100%;
+  padding: 0 7rem;
+}
+.process-timeline__content-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6rem;
+  width: 85%;
+  margin: 0 3rem 0 0;
+}
+.process-timeline__content-top-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.process-timeline__content-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: 1px solid #e7daed;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 150px;
+}
+.process-timeline__content-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.process-timeline__content-card-header h4 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #243342;
+  margin: 0;
+}
+.process-timeline__content-card-header p {
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.process-timeline__content-card-content {
+  margin-top: 0.8rem;
+}
+.process-timeline__content-card-content p {
+  font-size: 1.125rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #616161;
+  margin: 0;
+}
+.process-timeline__content-pink-border {
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  width: 3px;
+  height: 40px;
+}
+.process-timeline__content-middle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: -1.5rem;
+}
+.process-timeline__content-pink-horizontal-border {
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  width: 96%;
+  height: 3px;
+}
+.process-timeline__content-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6rem;
+  margin: -1.5rem 0 0 0;
+  width: 95%;
 }
 .process-timeline__image {
   width: 80%;
