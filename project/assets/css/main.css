@@ -1210,10 +1210,25 @@
   font-weight: 500;
   color: #243342;
   text-decoration: none;
+  position: relative;
   transition: color 0.2s ease;
+}
+.footer__nav-link::after, .footer__social-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
 }
 .footer__nav-link:hover, .footer__social-link:hover {
   color: #243342;
+}
+.footer__nav-link:hover::after, .footer__social-link:hover::after {
+  transform: scaleX(1);
 }
 .footer__scroll-top {
   display: flex;
