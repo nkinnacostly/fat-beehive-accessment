@@ -164,6 +164,19 @@
 }
 
 // Responsive Design
+@media (max-width: 1200px) {
+  .process-timeline {
+    &__content {
+      padding: 0 5rem;
+    }
+
+    &__content-top,
+    &__content-bottom {
+      gap: 5rem;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .process-timeline {
     &__container {
@@ -176,6 +189,15 @@
 
     &__subtitle {
       font-size: 1rem;
+    }
+
+    &__content {
+      padding: 0 4rem;
+    }
+
+    &__content-top,
+    &__content-bottom {
+      gap: 4rem;
     }
   }
 }
@@ -205,6 +227,52 @@
 
     &__content {
       padding: 0 $spacing-small;
+    }
+
+    &__content-top,
+    &__content-bottom {
+      grid-template-columns: 1fr;
+      gap: $spacing-large;
+      width: 100%;
+      margin: 0;
+    }
+
+    &__content-top {
+      margin-bottom: $spacing-large;
+    }
+
+    &__content-bottom {
+      margin-top: $spacing-large;
+    }
+
+    &__content-middle {
+      margin: $spacing-large 0;
+      justify-content: center;
+    }
+
+    &__content-pink-horizontal-border {
+      width: 80%;
+    }
+
+    &__content-card,
+    &__bottom-content-card {
+      height: auto;
+      min-height: 120px;
+    }
+
+    &__content-card-header {
+      h4 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__content-card-content {
+      p {
+        font-size: 1rem;
+      }
     }
 
     &__image {
@@ -239,8 +307,84 @@
       padding: 0;
     }
 
+    &__content-top,
+    &__content-bottom {
+      gap: $spacing-medium;
+    }
+
+    &__content-top {
+      margin-bottom: $spacing-medium;
+    }
+
+    &__content-bottom {
+      margin-top: $spacing-medium;
+    }
+
+    &__content-middle {
+      margin: $spacing-medium 0;
+    }
+
+    &__content-pink-horizontal-border {
+      width: 70%;
+    }
+
+    &__content-card,
+    &__bottom-content-card {
+      padding: $spacing-small;
+      min-height: 100px;
+    }
+
+    &__content-card-header {
+      h4 {
+        font-size: 1.125rem;
+      }
+      p {
+        font-size: 1.125rem;
+      }
+    }
+
+    &__content-card-content {
+      margin-top: $spacing-small;
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+    }
+
+    &__content-pink-border {
+      height: 30px;
+    }
+
     &__image {
       width: 100%;
+    }
+  }
+}
+
+// Extra small devices (phones in landscape, small phones)
+@media (max-width: 360px) {
+  .process-timeline {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__content-card-header {
+      h4 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__content-card-content {
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    &__content-pink-horizontal-border {
+      width: 60%;
     }
   }
 }
