@@ -80,9 +80,6 @@
     gap: $spacing-large;
   }
 
-  &__nav-item {
-    // No specific styles needed for list items
-  }
 
   &__nav-link {
     font-family: $font-family-primary;
@@ -107,11 +104,6 @@
 
   &__contact-btn {
     @include button-primary;
-    color: $light-green;
-
-    &:hover {
-      color: color.adjust($light-green, $lightness: 10%);
-    }
   }
 
   // Hamburger Menu Button

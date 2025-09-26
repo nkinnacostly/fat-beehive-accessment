@@ -89,11 +89,6 @@
   &__btn {
     &--primary {
       @include button-primary;
-      color: $light-green;
-
-      &:hover {
-        color: color.adjust($light-green, $lightness: 10%);
-      }
     }
 
     &--secondary {

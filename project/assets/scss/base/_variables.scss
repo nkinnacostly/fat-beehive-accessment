@@ -71,7 +71,8 @@ $transition-fast: 0.2s ease;
   color: $light-green;
 
   &:hover {
-    background-color: color.adjust($primary-color, $lightness: -10%);
+    background-color: $light-green;
+    color: $primary-color;
     transform: translateY(-2px);
   }
 }

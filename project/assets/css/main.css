@@ -103,14 +103,9 @@
   color: #b2fba4;
 }
 .header__contact-btn:hover {
-  background-color: rgb(18, 25.5, 33);
+  background-color: #b2fba4;
+  color: #243342;
   transform: translateY(-2px);
-}
-.header__contact-btn {
-  color: #b2fba4;
-}
-.header__contact-btn:hover {
-  color: rgb(219.3368421053, 253.1473684211, 212.8526315789);
 }
 .header__hamburger {
   display: none;
@@ -384,14 +379,9 @@
   color: #b2fba4;
 }
 .hero__btn--primary:hover {
-  background-color: rgb(18, 25.5, 33);
+  background-color: #b2fba4;
+  color: #243342;
   transform: translateY(-2px);
-}
-.hero__btn--primary {
-  color: #b2fba4;
-}
-.hero__btn--primary:hover {
-  color: rgb(219.3368421053, 253.1473684211, 212.8526315789);
 }
 .hero__btn--secondary {
   font-family: "Poppins", sans-serif;
@@ -980,7 +970,8 @@
   color: #b2fba4;
 }
 .cta-section__btn:hover {
-  background-color: rgb(18, 25.5, 33);
+  background-color: #b2fba4;
+  color: #243342;
   transform: translateY(-2px);
 }
 .cta-section__visual {
