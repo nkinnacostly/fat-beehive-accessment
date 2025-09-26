@@ -78,6 +78,16 @@
     margin-bottom: $spacing-large;
     height: 150px;
   }
+  &__bottom-content-card {
+    background-color: $white;
+    border-radius: $border-radius-medium;
+    padding: $spacing-medium;
+    border: 1px solid #e7daed;
+    width: 100%;
+    margin-bottom: $spacing-large;
+    height: 150px;
+    margin-top: 2rem;
+  }
   &__content-card-header {
     display: flex;
     justify-content: flex-start;
@@ -123,7 +133,7 @@
     width: 100%;
     margin-top: -1.5rem;
     p {
-      font-size: 0.74rem;
+      font-size: 0.79rem;
       font-family: $font-family-primary;
       font-weight: $font-weight-semibold;
       color: $text-color;
@@ -141,7 +151,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6rem;
     // border: 1px solid red;
-    margin: -0.6rem 0 0 0;
+    margin: -0.6rem 1rem 0 0;
     width: 95%;
   }
 
