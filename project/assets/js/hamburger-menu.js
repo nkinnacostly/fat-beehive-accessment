@@ -12,25 +12,36 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburgerBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Toggle the active state
-      hamburgerBtn.classList.toggle("header__hamburger--active");
-      navigation.classList.toggle("header__nav--open");
+      const isCurrentlyOpen =
+        navigation.classList.contains("header__nav--open");
 
-      // Update aria-expanded attribute for accessibility
-      const isExpanded = navigation.classList.contains("header__nav--open");
-      hamburgerBtn.setAttribute("aria-expanded", isExpanded);
-
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = isExpanded ? "hidden" : "";
-    });
-
-    // Close menu when clicking on navigation links
-    navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
+      if (isCurrentlyOpen) {
+        // Closing menu - remove classes immediately for smooth animation
         hamburgerBtn.classList.remove("header__hamburger--active");
         navigation.classList.remove("header__nav--open");
         hamburgerBtn.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
+      } else {
+        // Opening menu - add classes for smooth animation
+        hamburgerBtn.classList.add("header__hamburger--active");
+        navigation.classList.add("header__nav--open");
+        hamburgerBtn.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+    });
+
+    // Function to close menu with animation
+    function closeMenu() {
+      hamburgerBtn.classList.remove("header__hamburger--active");
+      navigation.classList.remove("header__nav--open");
+      hamburgerBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    // Close menu when clicking on navigation links
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMenu();
       });
     });
 
@@ -41,10 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         !navigation.contains(e.target) &&
         navigation.classList.contains("header__nav--open")
       ) {
-        hamburgerBtn.classList.remove("header__hamburger--active");
-        navigation.classList.remove("header__nav--open");
-        hamburgerBtn.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMenu();
       }
     });
 
@@ -54,10 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.key === "Escape" &&
         navigation.classList.contains("header__nav--open")
       ) {
-        hamburgerBtn.classList.remove("header__hamburger--active");
-        navigation.classList.remove("header__nav--open");
-        hamburgerBtn.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMenu();
         hamburgerBtn.focus(); // Return focus to hamburger button
       }
     });
@@ -65,10 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle window resize - close menu if screen becomes larger
     window.addEventListener("resize", function () {
       if (window.innerWidth > 768) {
-        hamburgerBtn.classList.remove("header__hamburger--active");
-        navigation.classList.remove("header__nav--open");
-        hamburgerBtn.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMenu();
       }
     });
   }
