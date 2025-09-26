@@ -662,7 +662,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
   width: 85%;
-  margin: 0 3rem 0 0;
+  margin: 0 0 0 3rem;
 }
 .process-timeline__content-top-item {
   display: flex;
@@ -751,8 +751,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
-  margin: -0.6rem 1rem 0 0;
-  width: 95%;
+  margin: -0.6rem 0 0 5rem;
+  width: 88%;
 }
 .process-timeline__image {
   width: 80%;

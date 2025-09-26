@@ -105,13 +105,6 @@
     }
   }
 
-  // Contact Button Section
-  &__cta {
-    // Container for the contact button
-    // width: 3.87rem;
-    // height: 3.3rem;
-  }
-
   &__contact-btn {
     @include button-primary;
     color: $light-green;
