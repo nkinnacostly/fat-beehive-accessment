@@ -622,6 +622,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .process-timeline__content-card {
   background-color: #ffffff;
